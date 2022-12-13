@@ -1,0 +1,5 @@
+deployment:
+  image: "nginx:1.15"
+  tag: "1.15"
+name: "nginx-app-1"
+port: 80
