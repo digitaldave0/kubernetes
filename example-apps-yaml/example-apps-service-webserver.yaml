@@ -1,0 +1,29 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: "2022-12-09T11:07:33Z"
+  labels:
+    app: webserver
+  name: webserver
+  namespace: example-apps
+  resourceVersion: "6755"
+  uid: 25b1c1fb-92ac-4553-8311-70a9d1cf95de
+spec:
+  clusterIP: 10.96.199.40
+  clusterIPs:
+  - 10.96.199.40
+  internalTrafficPolicy: Cluster
+  ipFamilies:
+  - IPv4
+  ipFamilyPolicy: SingleStack
+  ports:
+  - name: 8080-8080
+    port: 8080
+    protocol: TCP
+    targetPort: 8080
+  selector:
+    app: webserver
+  sessionAffinity: None
+  type: ClusterIP
+status:
+  loadBalancer: {}

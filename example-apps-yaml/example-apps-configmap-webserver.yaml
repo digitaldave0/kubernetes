@@ -1,0 +1,13 @@
+apiVersion: v1
+data:
+  config.json: |-
+    {
+        "config": "some-value"
+    }
+kind: ConfigMap
+metadata:
+  creationTimestamp: "2022-12-09T11:24:12Z"
+  name: webserver-config
+  namespace: example-apps
+  resourceVersion: "8446"
+  uid: b02b86fb-788e-4fbe-9f94-5825faeff574
