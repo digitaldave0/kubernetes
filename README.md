@@ -1,5 +1,5 @@
-## Kubernetes
-k8s All things ver 1.23.5 Kubenetes, Using Kind, Minkube, Helm, Ingress Controllers, Config Maps etc..
+## 
+All things Kubernetes : - ver 1.23.5 Kubenetes, Using Kind, Minkube, Helm, Ingress Controllers, Config Maps etc..
 
 ## kind project
 
