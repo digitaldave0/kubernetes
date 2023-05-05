@@ -1,0 +1,4 @@
+FROM nginx
+
+COPY index.green.html /usr/share/nginx/html/
+

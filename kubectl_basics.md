@@ -2,11 +2,23 @@
 
 ## Basics 
 
+- pods are a wrappers containers with features
+- impertaive fragile , if it crashed we need to notice that it crashed 
+- decelartaive we declare what state should be and kubernetes manages it
+- loose coupling  using services 'label selector' labels 
+- ClusterIP is default. 
+- NodePort 
+
+- Handling ingress apllicatiion path based routing , ingress controller 
+
+- deployment takes the defintaion of the pod makes it into a deployment 
+
+- StatefulSet 
+
+- Demonset runs one instance on each worker node
 
 
-- pods are a wrapper, cotainers with features
-- impertaive fragile , if it crashed we need to notice that in crashed 
-- decelartaive we declare what state the function should be in 
+
 
 
 
