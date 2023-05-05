@@ -1,0 +1,36 @@
+# This is a sample gitignore file for Kubernetes learning.
+# You may need to adjust the list of files to exclude based on your specific needs.
+
+# Build artifacts
+*.o
+*.so
+*.a
+*.lib
+*.dll
+*.exe
+
+# Kubernetes manifests
+*.yaml
+*.yml
+
+# Kubernetes logs
+*.log
+
+# Kubernetes secrets
+*.secret
+
+# Kubernetes configmaps
+*.configmap
+
+# Kubernetes plugins
+*.helm
+*.istio
+
+# Kubernetes test files
+*.test
+*.test.*
+
+# Other files
+*.tmp
+*.bak
+*.swp
