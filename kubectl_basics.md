@@ -1,5 +1,18 @@
 ## How to create and deploy simple PODs on a K8s cluster
 
+## Basics 
+
+
+
+- pods are a wrapper, cotainers with features
+- impertaive fragile , if it crashed we need to notice that in crashed 
+- decelartaive we declare what state the function should be in 
+
+
+
+
+
+
 ## kubectl commands
 ```bash
 kubectl -- get pods -A

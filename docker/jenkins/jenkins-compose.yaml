@@ -2,7 +2,7 @@ version: '3'
 services:
   jenkins:
     build: .  
-    #image: digital38/myjenkins:latest
+    image: digital38/myjenkins:latest
     container_name: jenkins
     user: jenkins
     volumes:

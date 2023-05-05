@@ -18,6 +18,12 @@ docker-compose down
 docker-compose down --volumes
 ```
 
+## prune older images 
+
+```console
+docker image prune -a --filter "until=15m"
+```
+
 ## Remove Images for docker hub
 ```console
 read -s USERNAME
@@ -94,3 +100,31 @@ oc status
 oc edit bc/myapp
 ```
 ---- 
+
+
+> Using docker cmd vs docker-compose declarative way
+
+## using docker cmd mongo example
+
+```bash 
+docker run -d \
+--name mongodb \
+-p 27017:27017 \
+-e MONGO-INITDB_ROOT_USERNAME=admin \
+-e MONGO-INITDB_ROOT_PASSWORD=letme1 \
+--net mongo-network
+mongo
+```
+
+### docker compose for same as above
+
+```code
+version:'3'
+services:
+    mongdb:
+      image:mongo
+      ports:
+       -27017:27017
+    environment:
+       - MONGO-INITDB_ROOT_USERNAME="admin"
+```

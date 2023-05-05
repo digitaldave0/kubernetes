@@ -1,23 +1,12 @@
 FROM jenkins/jenkins:lts
-LABEL version="0.1"
-USER root
-
-
-GOPATH=~/go/
-export PATH=$GOPATH/bin:$PATH
-ENV HOME=GOPATH=~/go/ \
-    URL='https://golang.org/dl/go1.15.5.linux-amd64.tar.gz' \
-    FILE='go1.15.5.linux-amd64.tar.gz' 
-
-
-RUN apt-get update && \
-    apt-get -y install \
-    apt-transport-https \
-    ca-certificates \
-    gnupg2 \
-    software-properties-common
-
-RUN wget  $URL  -O /tmp/$FILE && \
-    tar -xzvf /tmp/$FILE -C /usr/local
-
-docker run -it --rm devenvironment:1.0 bash
+    USER root
+    RUN apt-get update -qq \
+        && apt-get install -qqy apt-transport-https ca-certificates curl gnupg2 software-properties-common
+    RUN curl -fsSL https://download.docker.com/linux/debian/gpg | apt-key add -
+    RUN add-apt-repository \
+       "deb [arch=amd64] https://download.docker.com/linux/debian \
+       $(lsb_release -cs) \
+       stable"
+    RUN apt-get update  -qq \
+        && apt-get install docker-ce=18.0.0~ce-0~debian -y
+    RUN usermod -aG docker jenkins
